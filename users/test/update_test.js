@@ -28,7 +28,7 @@ describe('Updating records', () => {
     assertName(edwin.updateOne({ name: 'alex' }), done);
   });
 
-  it('A user post Count can be incremented by one', (done) => {
+  xit('A user post Count can be incremented by one', (done) => {
     User.updateOne({ name: 'edwin' }, { $inc: { postCount: 1 } }).then(() => {
       User.findOne({ name: 'edwin' }).then((user) => {
         console.log(user);
