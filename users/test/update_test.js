@@ -28,11 +28,11 @@ describe('Updating records', () => {
     assertName(edwin.updateOne({ name: 'alex' }), done);
   });
 
-  xit('A user post Count can be incremented by one', (done) => {
-    User.updateOne({ name: 'edwin' }, { $inc: { postCount: 1 } }).then(() => {
+  it('A user post Count can be incremented by one', (done) => {
+    User.updateOne({ name: 'edwin' }, { $inc: { likes: 10 } }).then(() => {
       User.findOne({ name: 'edwin' }).then((user) => {
         console.log(user);
-        assert(user.postCount === 1);
+        assert(user.likes === 10);
         done();
       });
     });

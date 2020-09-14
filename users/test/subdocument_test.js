@@ -33,7 +33,7 @@ describe('Subdocument', () => {
       });
   });
 
-  it('Removing subdocuments', (done) => {
+  xit('Removing subdocuments', (done) => {
     const edwin = new User({
       name: 'edwin',
       posts: [{ title: 'New Title' }],
