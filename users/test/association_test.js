@@ -36,7 +36,7 @@ describe('Association test', () => {
       });
   });
 
-  it.only('Save a full relation tree', (done) => {
+  it('Save a full relation tree', (done) => {
     User.findOne({ name: 'edwin' })
       .populate({
         path: 'blogPosts',
