@@ -733,7 +733,7 @@ WriteError({
 }
 ]
 }
-        }
+}
 })
 WriteError@src/mongo/shell/bulk_api.js:458:48
 mergeBatchResults@src/mongo/shell/bulk_api.js:855:49
@@ -741,6 +741,7 @@ executeBatch@src/mongo/shell/bulk_api.js:919:13
 Bulk/this.execute@src/mongo/shell/bulk_api.js:1163:21
 DBCollection.prototype.insertOne@src/mongo/shell/crud_api.js:264:9
 @(shell):1:1
+
 ### Updating Validations
 
 ### Data Modelling & Structuring - Things to consider.
@@ -785,8 +786,7 @@ Start mongodb as a service.
 
 windows. net stop mongodb
 
-
-   mongod --port 23343 --bind_ip 127.0.0.1 --dbpath ./data
+mongod --port 23343 --bind_ip 127.0.0.1 --dbpath ./data
 
 ### Using mongoDb config files
 
@@ -801,3 +801,13 @@ mongod -f <pathtoconfig> --port <port> --bind_ip 127.0.0.1
 ### MongoDB Compass.
 
 Give you a way to explore data visual.
+
+##### What insied
+
+insertOne() db.collectionName.insertOne({field: "value"})
+
+insertMany() db.conllection.insertMany([{field: "value"}, field: "value"])
+
+insert() db.collection.insert()
+
+mongoimport mongoimport -d cars -c carsList --drop --jsonArray
