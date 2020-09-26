@@ -68,26 +68,7 @@ insert or fetch Data                users or manage the database config      to 
  *  show dbs
  *  Mongo allows to create only one User if its the first time you are connecting.
  */
-db.createUser({ user: 'edwin', pwd: 'max', roles: ['userAdminAnyDatabase'] });
-
-// authenticate
-db.auth('admin', 'pwd');
-// mongo -u 'edwin' -p 'max' --authenticationDatabase admin
-// now you are able to
-/*
-> use admin
-switched to db admin
-> db.createUser({ user: 'edwin', pwd: 'max', roles: ['userAdminAnyDatabase'] });
-Successfully added user: { "user" : "edwin", "roles" : [ "userAdminAnyDatabase" ] }
-*/
-
-/* Build-In Roles.
- 
- Database User              Database Admin            All Database Roles
-    Read                      dbAdmin                   readAnyDatbase
-    readWrite               userAdmin                   readWriteAnyDatabase
-                             dbOwner                    userAdminAnyDatabase
-                                                        dbAdminAnyDatabase
+db.createUser({ user: 'edwin', pwd: 'max', roles: ['user
 Cluster Admin          Backups/Restore         SuperUser
   clusterManager         backup                dbOwner(admin)
   clusterMonitor         restore               userAdmin(admin)
